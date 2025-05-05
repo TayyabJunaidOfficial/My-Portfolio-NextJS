@@ -1,6 +1,9 @@
 import Link from 'next/link'
 import React from 'react'
 import { SiGithub, SiGmail, SiLinkedin } from 'react-icons/si'
+import ThemeToggle from './ThemeToggle'
+
+
 
 const navLinks=[
   {href:"/",label:"Home"},
@@ -35,7 +38,7 @@ const hoverGradient =
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-evenly items-center gap-96 py-2">
+    <nav className="flex justify-evenly items-center border-b-2 shadow-lg gap-96 py-2 bg-white text-black dark:bg-black dark:text-white">
       <h1 className="text-3xl text-center p-2 font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
         Tayyab J.
       </h1>
@@ -53,6 +56,9 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+        </li>
+        <li>
+        <ThemeToggle/>
         </li>
       </ul>
     </nav>
