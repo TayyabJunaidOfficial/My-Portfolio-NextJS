@@ -1,34 +1,37 @@
-import Link from "next/link";
-import React from "react";
-import { SiGithub, SiLinkedin, SiGmail } from "react-icons/si";
+import Link from 'next/link'
+import React from 'react'
+import { SiGithub, SiGmail, SiLinkedin } from 'react-icons/si'
 
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "About", label: "About" },
-  { href: "Tech_Stack", label: "Tech Stack" },
-  { href: "Contact", label: "Contact" },
-];
+const navLinks=[
+  {href:"/",label:"Home"},
+  {href:"About",label:"About"},
+  {href:"Tech_Stack",label:"Tech Stack"},
+  {href:"Contact",label:"Contact"},
+]
 
-const socialLinks = [
+const socialLinks=[
   {
-    href: "",
-    icon: <SiGithub size={20} />,
-    hover: "hover:text-neutral-900 hover:drop-shadow-[0_0_8px_rgba(24,23,23,0.75)]",
+    href:"",
+    icon:<SiGithub size={20}/>,
+    hover:"hover:text-neutral-900 hover:drop-shadow-[0_0_8px_rgba(24,23,23,0.75)]",
   },
   {
-    href: "",
-    icon: <SiLinkedin size={20} />,
+    href:"",
+    icon:<SiLinkedin size={20}/>,
     hover: "hover:text-sky-600 hover:drop-shadow-[0_0_8px_rgba(0,119,181,0.75)]",
+
   },
   {
-    href: "",
-    icon: <SiGmail size={20} />,
+    href:"",
+    icon:<SiGmail size={20}/>,
     hover: "hover:text-red-400 hover:drop-shadow-[0_0_8px_rgba(209,72,54,0.75)]",
+
   },
-];
+]
 
 const hoverGradient =
-  "hover:bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500 hover:bg-clip-text hover:text-transparent transition duration-300";
+"hover:bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500 hover:bg-clip-text hover:text-transparent transition duration-300";
+
 
 const Navbar = () => {
   return (
@@ -37,25 +40,23 @@ const Navbar = () => {
         Tayyab J.
       </h1>
       <ul className="flex justify-center items-center gap-10">
-        {navLinks.map(({ href, label }) => (
+        {navLinks.map(({href,label})=>(
           <li key={label}>
-            <Link href={href} className={hoverGradient}>
-              {label}
-            </Link>
+            <Link href={href} className={hoverGradient}>{label}</Link>
           </li>
         ))}
-        <ul className="flex justify-center items-center gap-5">
-          {socialLinks.map(({ href, icon, hover }, index) => (
-            <li key={index}>
-              <Link href={href} className={`${hover} transition duration-300`}>
-                {icon}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <li>
+          <ul className="flex justify-center items-center gap-5">
+            {socialLinks.map(({href,icon,hover},index)=>(
+              <li key={index}>
+                <Link href={href} className={`${hover} transition duration-300`}>{icon}</Link>
+              </li>
+            ))}
+          </ul>
+        </li>
       </ul>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
