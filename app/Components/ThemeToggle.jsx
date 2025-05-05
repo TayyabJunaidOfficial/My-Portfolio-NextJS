@@ -1,28 +1,29 @@
-'use client'; // this marks the component to run only in the browser
+'use client';
 
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
-import { CiLight } from "react-icons/ci";
-
+import { FiMoon, FiSun } from 'react-icons/fi'; // React Icons
 
 const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Once mounted, set the state to avoid SSR mismatch
     setMounted(true);
   }, []);
 
-  // If not mounted, return null to prevent rendering until after hydration
   if (!mounted) return null;
 
   return (
     <button
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className="p-2 rounded dark:border-white border-black"
+      className="relative flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 transition-colors duration-300"
     >
-      {theme === 'dark' ? '☀️ Light' : '🌙 Dark'}
+      {theme === 'dark' ? (
+        <FiSun className="text-yellow-400 w-5 h-5" />
+      ) : (
+        <FiMoon className="text-gray-700 w-5 h-5" />
+      )}
     </button>
   );
 };
