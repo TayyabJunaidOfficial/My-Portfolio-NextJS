@@ -1,17 +1,19 @@
 'use client';
 
 import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
-import { FiMoon, FiSun } from 'react-icons/fi'; // React Icons
+import { useState, useEffect } from 'react';
+import { FiMoon, FiSun } from 'react-icons/fi';
 
 const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // This will make sure the component is mounted before making any changes
     setMounted(true);
   }, []);
 
+  // Don't render anything until the component is mounted on the client
   if (!mounted) return null;
 
   return (

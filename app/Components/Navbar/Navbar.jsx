@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { SiGithub, SiGmail, SiLinkedin } from 'react-icons/si'
-import ThemeToggle from './ThemeToggle'
+import ThemeToggle from '../ThemeToggle/ThemeToggle'
 
 
 
@@ -48,7 +48,6 @@ const Navbar = () => {
             <Link href={href} className={hoverGradient}>{label}</Link>
           </li>
         ))}
-        <li>
           <ul className="flex justify-center items-center gap-5">
             {socialLinks.map(({href,icon,hover},index)=>(
               <li key={index}>
@@ -56,10 +55,7 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-        </li>
-        <li>
         <ThemeToggle/>
-        </li>
       </ul>
     </nav>
   )
