@@ -18,7 +18,7 @@ const ThemeToggle = () => {
     <div>
       <button
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        className="relative flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 transition duration-1000"
+        className="cursor-pointer relative flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 transition duration-1000"
       >
         {theme === "dark" ? (
           <FiSun className="text-yellow-400 w-5 h-5" />

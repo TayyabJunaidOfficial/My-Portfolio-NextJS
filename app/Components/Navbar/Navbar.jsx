@@ -73,7 +73,8 @@ const Navbar = () => {
 
         {/* Theme Toggle */}
         <ThemeToggle />
-      </div>
+        </div>
+        
     </nav>
 
     {/* Hamburger Working */}
