@@ -5,28 +5,34 @@ import Profile_Pic from "../Components/Profile_Pic/Profile_Pic";
 
 const About = () => {
   return (
-    <main className="flex justify-center items-center gap-4 py-15 px-6 bg-white text-black dark:bg-black dark:text-white">
-      <div className="w-full max-w-4xl font-bold text-5xl">
-        <div className="flex gap-1 py-3">
-        <span>Hey</span>
-        <span className="wave" role="img" aria-labelledby="wave">
-          👋🏻
+    <main className="flex flex-col md:flex-row md:justify-center items-center gap-8 lg:py-25 py-10 bg-white text-black dark:bg-black dark:text-white">
+      <div className="lg:w-full 2xl:max-w-4xl xl:max-w-3xl md:max-w-xl font-bold md:text-5xl sm:text-4xl text-3xl">
+        <div className="flex justify-center md:justify-start gap-1 py-3">
+          <span>Hey</span>
+          <span className="wave" role="img" aria-labelledby="wave">
+            👋🏻
           </span>
           ,
         </div>
-        <p className="py-3 ">My Name is</p>
-        <p className="py-3 cursor-pointer font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">Tayyab Juniad</p>
-        <span className="pt-2">
-        <Typewriter
-          options={{
-            strings: ["React JS Developer", "Web Designer", "Website Creator"],
-            autoStart: true,
-            loop: true,
-          }}
-        />
+        <p className="py-3">My Name is</p>
+        <p className="py-3 cursor-pointer font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
+          Tayyab Juniad
+        </p>
+        <span className="lg:pt-2 pt-3 text-2xl">
+          <Typewriter
+            options={{
+              strings: [
+                "React JS Developer",
+                "Web Designer",
+                "Website Creator",
+              ],
+              autoStart: true,
+              loop: true,
+            }}
+          />
         </span>
       </div>
-      <Profile_Pic/>
+      <Profile_Pic />
     </main>
   );
 };

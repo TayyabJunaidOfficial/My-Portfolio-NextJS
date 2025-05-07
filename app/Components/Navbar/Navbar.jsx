@@ -39,8 +39,8 @@ const Navbar = () => {
   return (
     <>
     <nav className="md:flex flex-row md:justify-evenly m-auto items-center border-b-2 xl:gap-96 py-2 bg-white text-black dark:bg-black dark:text-white">
-      <h1 href="/" className={`${hoverGlow} text-3xl text-center p-2 cursor-pointer font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent`}>
-        Tayyab J.
+      <h1 className={`${hoverGlow} text-3xl text-center p-2 cursor-pointer font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent`}>
+        <Link href="/">Tayyab J.</Link>
       </h1>
       {/* Hamburger Button */}
       <div className="sm:hidden absolute top-6 right-4 z-50">
