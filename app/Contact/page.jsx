@@ -3,18 +3,18 @@ import React from "react";
 const Contact = () => {
   return (
     <main className="flex flex-col md:justify-center items-center gap-8 py-5 bg-white text-black dark:bg-black dark:text-white">
-      <h1 className="sm:text-5xl text-4xl p-3 text-center gradient-text">
+      <h1 className="sm:text-5xl text-4xl p-2 text-center gradient-text">
         Contact Us
       </h1>
-      <p>For any questions please cotact us:</p>
-      <p>
-        I’M ALWAYS OPEN TO DISCUSSING PRODUCT
-        <b>DESIGN WORK OR PARTNERSHIPS.</b>{" "}
+      <p className="flex gap-2 justify-center items-center sm:text-xl text-lg text-center">
+        I’m Always Open To Discussing Product
+        <b className="gradient-text">Design Work Or Partnerships.</b>{" "}
       </p>
+      <p className="sm:text-xl text-lg text-center">For any questions please contact us:</p>
       <form action="">
-        <input type="name" />
-        <input type="email" />
-        <input type="message" />
+        <label htmlFor="">Name:</label><input type="name" />
+        <label htmlFor="">Email:</label><input type="email" />
+        <label htmlFor="">Message</label><input type="message" />
       </form>
     </main>
   );
