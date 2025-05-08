@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -8,7 +8,7 @@ const formSchema = z.object({
     .string()
     .min(5, { message: "Minimum 5 characters" })
     .max(15, { message: "Maximum 15 characters" }),
-    email: z.string().email({ message: "Invalid email address" }),
+  email: z.string().email({ message: "Invalid email address" }),
   message: z.string().min(10, { message: "Min 15 characters long" }),
 });
 
@@ -24,16 +24,22 @@ const Form = () => {
 
   const onSubmit = (data) => console.log(data);
   return (
-      <>
+    <>
       <form
-        onSubmit={handleSubmit(onSubmit)}
+        action="https://formsubmit.co/tayyabjunaidofficiall@gmail.com"
+        method="POST"
         className="flex flex-col gap-4 w-full sm:max-w-lg max-w-sm"
       >
+        <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_next" value="https://my-portfolio-next-js-alpha.vercel.app//thank-you" />
+
         <div className="flex justify-center items-center relative">
           <input
             id="name"
+            name="email"
             type="text"
             placeholder=" "
+            required
             {...register("name")}
             className="peer sm:w-full w-xs border border-gray-500 rounded px-3 pt-6 pb-2 outline-none focus:ring-2 focus:ring-blue-500"
           />
@@ -51,8 +57,10 @@ const Form = () => {
         <div className="flex justify-center items-center relative">
           <input
             id="email"
+            name="email"
             type="email"
             placeholder=" "
+            required
             {...register("email")}
             className="peer sm:w-full w-xs border border-gray-500 rounded px-3 pt-6 pb-2 outline-none focus:ring-2 focus:ring-blue-500"
           />
@@ -70,8 +78,10 @@ const Form = () => {
         <div className="flex justify-center items-center relative">
           <textarea
             id="message"
+            name="email"
             type="text"
             placeholder=" "
+            required
             {...register("message")}
             className="peer sm:w-full w-xs border border-gray-500 rounded px-3 pt-6 pb-2 outline-none focus:ring-2 focus:ring-blue-500"
           />
@@ -89,15 +99,15 @@ const Form = () => {
         </div>
 
         <div className="flex sm:justify-end justify-center">
-        <input
-          type="submit"
-          value="Send"
-          className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white border-2 w-24 rounded-lg py-2 font-semibold transition hover:shadow-[0_0_15px_#ec4899]"
+          <input
+            type="submit"
+            value="Send"
+            className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white border-2 w-24 rounded-lg py-2 font-semibold transition hover:shadow-[0_0_15px_#ec4899]"
           />
         </div>
       </form>
-      </>
-  )
-}
+    </>
+  );
+};
 
-export default Form
+export default Form;
