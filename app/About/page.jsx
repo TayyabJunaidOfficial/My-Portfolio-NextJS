@@ -15,10 +15,10 @@ const About = () => {
           ,
         </div>
         <p className="py-3">My Name is</p>
-        <p className="py-3 cursor-pointer font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
+        <p className="py-3 gradient-text">
           Tayyab Juniad
         </p>
-        <span className="lg:pt-2 pt-3 text-2xl">
+        <span className="lg:pt-2 pt-3 text-2xl md:text-5xl">
           <Typewriter
             options={{
               strings: [
