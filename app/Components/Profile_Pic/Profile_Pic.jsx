@@ -9,7 +9,7 @@ const Profile_Pic = () => {
           <Image
             src={profilePic}
             alt="Profile picture"
-            fill
+          
             className="object-cover"
           />
         </div>

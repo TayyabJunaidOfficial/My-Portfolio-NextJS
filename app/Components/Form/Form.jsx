@@ -22,24 +22,31 @@ const Form = () => {
     resolver: zodResolver(formSchema),
   });
 
-  const onSubmit = (data) => console.log(data);
-  return (
+  const onSubmit = async (data) => {
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+  
+      if (res.ok) alert('Message sent!');
+      else throw new Error('Error sending message');
+    } catch (err) {
+      alert(err.message);
+    }
+  };
+    return (
     <>
-      <form
-        action="https://formsubmit.co/tayyabjunaidofficiall@gmail.com"
-        method="POST"
+        <form
+        onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col gap-4 w-full sm:max-w-lg max-w-sm"
       >
-        <input type="hidden" name="_captcha" value="false" />
-  <input type="hidden" name="_next" value="https://my-portfolio-next-js-alpha.vercel.app//thank-you" />
-
         <div className="flex justify-center items-center relative">
           <input
             id="name"
-            name="email"
             type="text"
             placeholder=" "
-            required
             {...register("name")}
             className="peer sm:w-full w-xs border border-gray-500 rounded px-3 pt-6 pb-2 outline-none focus:ring-2 focus:ring-blue-500"
           />
@@ -57,10 +64,8 @@ const Form = () => {
         <div className="flex justify-center items-center relative">
           <input
             id="email"
-            name="email"
             type="email"
             placeholder=" "
-            required
             {...register("email")}
             className="peer sm:w-full w-xs border border-gray-500 rounded px-3 pt-6 pb-2 outline-none focus:ring-2 focus:ring-blue-500"
           />
@@ -78,10 +83,8 @@ const Form = () => {
         <div className="flex justify-center items-center relative">
           <textarea
             id="message"
-            name="email"
             type="text"
             placeholder=" "
-            required
             {...register("message")}
             className="peer sm:w-full w-xs border border-gray-500 rounded px-3 pt-6 pb-2 outline-none focus:ring-2 focus:ring-blue-500"
           />
