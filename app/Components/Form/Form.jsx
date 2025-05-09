@@ -52,7 +52,7 @@ const Form = () => {
           />
           <label
             htmlFor="name"
-            className="absolute sm:left-3 left-7 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm"
+            className="absolute sm:left-3 left-10 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm"
           >
             Name
           </label>
@@ -71,7 +71,7 @@ const Form = () => {
           />
           <label
             htmlFor="email"
-            className="absolute sm:left-3 left-7 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm"
+            className="absolute sm:left-3 left-10 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm"
           >
             Email
           </label>
@@ -90,7 +90,7 @@ const Form = () => {
           />
           <label
             htmlFor="message"
-            className="absolute sm:left-3 left-7 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm"
+            className="absolute sm:left-3 left-10 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm"
           >
             Message
           </label>
