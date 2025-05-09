@@ -6,7 +6,7 @@ import Form from "../Components/Form/Form";
 const Contact = () => {
 
   return (
-    <main className="flex flex-col md:justify-center items-center gap-8 py-5 bg-white text-black dark:bg-black dark:text-white">
+    <main className="flex flex-col md:justify-center items-center gap-8 py-5 ">
       <h1 className="sm:text-5xl text-4xl p-2 text-center gradient-text">
         Contact Us
       </h1>

@@ -119,8 +119,8 @@
   }
 }
 
-html,body {
-  transition: background-color 0.5s ease, color 0.5s ease;
+html, body {
+  transition: background-color 1s ease, color 1s ease;
 }
 
 .wave {

@@ -16,7 +16,7 @@ const socialLinks = [
   {
     href: "",
     icon: <SiGithub size={20} />,
-    hover: "hover:text-neutral-900 hover:drop-shadow-[0_0_8px_rgba(24,23,23,0.75)]",
+    hover: "hover:drop-shadow-[0_0_10px_#8e6fc3] dark:hover:drop-shadow-[0_0_10px_#a991ff]",
   },
   {
     href: "",
@@ -31,14 +31,14 @@ const socialLinks = [
 ]
 
 const hoverGradient =
-  "hover:bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500 hover:bg-clip-text hover:text-transparent transition duration-300";
+  "hover:bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500 hover:bg-clip-text hover:text-transparent transition duration-100";
   const hoverGlow = "hover:drop-shadow-[0_0_20px_rgba(236,72,153,1)] transition duration-300";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
   return (
     <>
-    <nav className="md:flex flex-row md:justify-evenly m-auto items-center border-b-2 xl:gap-96 py-2 bg-white text-black dark:bg-black dark:text-white">
+    <nav className="md:flex flex-row md:justify-evenly m-auto items-center border-b-2 xl:gap-96 py-2 ">
       <h1 className={`${hoverGlow} text-3xl text-center p-2 gradient-text`}>
         <Link href="/">Tayyab J.</Link>
       </h1>
