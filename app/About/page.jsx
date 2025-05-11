@@ -1,8 +1,9 @@
 "use client";
 import React from "react";
+
 import { FaGraduationCap } from "react-icons/fa";
 import { GiSuitcase } from "react-icons/gi";
-
+import EduCard from "../Components/Cards/EduCard";
 
 
 const About = () => {
@@ -12,12 +13,13 @@ const About = () => {
         About
       </h1>
       <div>
-   <FaGraduationCap />
+        <FaGraduationCap />
         <h1>Academic Background</h1>
+        <EduCard/>
       </div>
       <div>
-      <GiSuitcase />
-  <h1>Career Highlights</h1>
+        <GiSuitcase />
+        <h1>Career Highlights</h1>
       </div>
     </main>
   );
