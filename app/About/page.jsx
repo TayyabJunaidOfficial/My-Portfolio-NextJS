@@ -4,6 +4,7 @@ import React from "react";
 import { FaGraduationCap } from "react-icons/fa";
 import { GiSuitcase } from "react-icons/gi";
 import EduCard from "../Components/Cards/EduCard";
+import Info_Section from "../Components/Info_Section/Info_Section";
 
 const About = () => {
   return (
@@ -11,26 +12,25 @@ const About = () => {
       <h1 className="sm:text-5xl text-4xl p-3 text-center gradient-text">
         About
       </h1>
-      <section className="flex flex-col md:flex-row gap-10 w-full max-w-6xl justify-center items-start">
+      <section className="">
         {/* Academic Background Section */}
-        <article className="flex-1 flex flex-col items-center text-center md:text-left">
-          <div className="flex items-center gap-2 text-2xl font-semibold mb-4">
-            <FaGraduationCap className="text-blue-600" />
-            <span>Academic Background</span>
-          </div>
+        <Info_Section
+          icon={<FaGraduationCap className="text-blue-600" />}
+          title="Academic Background"
+        >
           <EduCard />
-        </article>
+        </Info_Section>
 
         {/* Career Highlights Section */}
-        <article className="flex-1 flex flex-col items-center text-center md:text-left">
-          <div className="flex items-center gap-2 text-2xl font-semibold mb-4">
-            <GiSuitcase className="text-green-600" />
-            <span>Career Highlights</span>
-          </div>
+        <Info_Section
+          icon={<GiSuitcase className="text-green-600" />}
+          title="Career Highlights"
+        >
           <p className="text-gray-600">
-            No formal work experience yet, but passionate and actively learning. Eager to contribute and grow professionally.
+            No formal work experience yet, but passionate and actively learning.
+            Eager to contribute and grow professionally.
           </p>
-        </article>
+        </Info_Section>
       </section>
     </main>
   );
