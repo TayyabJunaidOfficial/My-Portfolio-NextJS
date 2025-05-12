@@ -11,18 +11,18 @@ const About = () => {
       <h1 className="sm:text-5xl text-4xl p-3 text-center gradient-text">
         About
       </h1>
-      <div className="flex flex-col md:flex-row gap-10 w-full max-w-6xl justify-center items-start">
+      <section className="flex flex-col md:flex-row gap-10 w-full max-w-6xl justify-center items-start">
         {/* Academic Background Section */}
-        <div className="flex-1 flex flex-col items-center text-center md:text-left">
+        <article className="flex-1 flex flex-col items-center text-center md:text-left">
           <div className="flex items-center gap-2 text-2xl font-semibold mb-4">
             <FaGraduationCap className="text-blue-600" />
             <span>Academic Background</span>
           </div>
           <EduCard />
-        </div>
+        </article>
 
         {/* Career Highlights Section */}
-        <div className="flex-1 flex flex-col items-center text-center md:text-left">
+        <article className="flex-1 flex flex-col items-center text-center md:text-left">
           <div className="flex items-center gap-2 text-2xl font-semibold mb-4">
             <GiSuitcase className="text-green-600" />
             <span>Career Highlights</span>
@@ -30,8 +30,8 @@ const About = () => {
           <p className="text-gray-600">
             No formal work experience yet, but passionate and actively learning. Eager to contribute and grow professionally.
           </p>
-        </div>
-      </div>
+        </article>
+      </section>
     </main>
   );
 };
