@@ -34,11 +34,11 @@ const Edu_Card = () => {
         <p>Academic Background</p>
       </div>
 
-      <div className="flex flex-col gap-5 justify-center items-center text-center lg:text-left">
+      <div className="flex flex-col gap-5 justify-center items-center text-center">
         {educationData.map((item, index) => (
           <Card key={index} className="bg-white shadow-md rounded-2xl max-w-lg">
             <CardContent className="px-4 py-6">
-              <div className="flex justify-center lg:justify-start mb-4">
+              <div className="flex justify-center mb-4">
                 <div className="w-[70px] h-[70px] relative">
                   <Image
                     src={item.src}

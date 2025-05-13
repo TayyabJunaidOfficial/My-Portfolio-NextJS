@@ -9,7 +9,7 @@ const About = () => {
       <h1 className="sm:text-5xl text-4xl p-3 text-center gradient-text">
         About
       </h1>
-      <section className="flex md:flex-row flex-col justify-center px-5 gap-5">
+      <section className="flex flex-col lg:flex-row justify-center px-5 gap-5">
         {/* Academic Background Section */}
         <article>
           <Edu_Card />
