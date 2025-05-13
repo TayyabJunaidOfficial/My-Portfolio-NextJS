@@ -1,10 +1,7 @@
 "use client";
 import React from "react";
-
-import { FaGraduationCap } from "react-icons/fa";
-import { GiSuitcase } from "react-icons/gi";
-import EduCard from "../Components/Cards/EduCard";
-import Info_Section from "../Components/Info_Section/Info_Section";
+import Edu_Card from "../Components/Cards/Edu_Card";
+import Exp_Card from "../Components/Cards/Exp_Card";
 
 const About = () => {
   return (
@@ -12,25 +9,16 @@ const About = () => {
       <h1 className="sm:text-5xl text-4xl p-3 text-center gradient-text">
         About
       </h1>
-      <section className="">
+      <section className="flex md:flex-row flex-col justify-center px-5 gap-5">
         {/* Academic Background Section */}
-        <Info_Section
-          icon={<FaGraduationCap className="text-blue-600" />}
-          title="Academic Background"
-        >
-          <EduCard />
-        </Info_Section>
+        <article>
+          <Edu_Card />
+        </article>
 
         {/* Career Highlights Section */}
-        <Info_Section
-          icon={<GiSuitcase className="text-green-600" />}
-          title="Career Highlights"
-        >
-          <p className="text-gray-600">
-            No formal work experience yet, but passionate and actively learning.
-            Eager to contribute and grow professionally.
-          </p>
-        </Info_Section>
+        <article >
+          <Exp_Card/>
+        </article>
       </section>
     </main>
   );
