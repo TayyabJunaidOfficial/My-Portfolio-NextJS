@@ -47,59 +47,59 @@ const Form = () => {
       onSubmit={handleSubmit(onSubmit)}
       className="flex flex-col gap-4 w-full sm:max-w-lg max-w-sm"
     >
-      <div className="flex justify-center items-center relative">
+      <div className="flex justify-center flex-col items-center relative">
         <input
           id="name"
           type="text"
           placeholder=" "
           {...register("name")}
-          className="peer sm:w-full w-xs border border-gray-500 rounded px-3 pt-6 pb-2 outline-none focus:ring-2 focus:ring-blue-500"
+          className="peer sm:w-sm w-xs border border-gray-500 rounded px-4 pt-6 pb-2 outline-none focus:ring-2 focus:ring-blue-500"
         />
         <label
           htmlFor="name"
-          className="absolute sm:left-3 left-10 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm"
+          className="absolute sm:left-20 left-12 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm"
         >
           Name
         </label>
         {errors.name && (
-          <span className="text-red-500 text-sm">{errors.name.message}</span>
+          <span className="text-red-500 pt-2 text-sm">{errors.name.message}</span>
         )}
       </div>
 
-      <div className="flex justify-center items-center relative">
+      <div className="flex justify-center flex-col items-center relative">
         <input
           id="email"
           type="email"
           placeholder=" "
           {...register("email")}
-          className="peer sm:w-full w-xs border border-gray-500 rounded px-3 pt-6 pb-2 outline-none focus:ring-2 focus:ring-blue-500"
+          className="peer sm:w-sm w-xs border border-gray-500 rounded px-4 pt-6 pb-2 outline-none focus:ring-2 focus:ring-blue-500"
         />
         <label
           htmlFor="email"
-          className="absolute sm:left-3 left-10 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm"
+          className="absolute sm:left-20 left-12 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm"
         >
           Email
         </label>
         {errors.email && (
-          <span className="text-red-500 text-sm">{errors.email.message}</span>
+          <span className="text-red-500 pt-2 text-sm">{errors.email.message}</span>
         )}
       </div>
 
-      <div className="flex justify-center items-center relative">
+      <div className="flex justify-center flex-col items-center relative">
         <textarea
           id="message"
           placeholder=" "
           {...register("message")}
-          className="peer sm:w-full w-xs border border-gray-500 rounded px-3 pt-6 pb-2 outline-none focus:ring-2 focus:ring-blue-500"
+          className="peer sm:w-sm w-xs border border-gray-500 rounded px-4 pt-6 pb-2 outline-none focus:ring-2 focus:ring-blue-500"
         />
         <label
           htmlFor="message"
-          className="absolute sm:left-3 left-10 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm"
+          className="absolute sm:left-20 left-12 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm"
         >
           Message
         </label>
         {errors.message && (
-          <span className="text-red-500 text-sm">{errors.message.message}</span>
+          <span className="text-red-500 pt-2 text-sm">{errors.message.message}</span>
         )}
       </div>
 
