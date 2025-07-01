@@ -26,8 +26,8 @@ const ProjectsData = [
 
 const Work = () => {
   return (
-    <div className="max-w-4xl mx-auto">
-      <div className="flex gap-6">
+    <div className="max-w-4xl p-4 mx-auto">
+      <div className="flex gap-6 lg:flex-row flex-col">
         {ProjectsData.map(
           ({ heading, src, description, visit, alt }, index) => (
             <CardContainer key={index} className="inter-var">

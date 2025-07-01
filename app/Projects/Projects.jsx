@@ -10,7 +10,6 @@ const Projects = () => {
       <h1 className="sm:text-5xl text-4xl p-3 text-center gradient-text">
         Learning by Doing
       </h1>
-      <p>Section Under Development...</p>
       <Work/>
     </main>
   );
