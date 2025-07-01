@@ -1,4 +1,8 @@
 import React from "react";
+import Work from "../Components/Work/Work";
+
+
+
 
 const Projects = () => {
   return (
@@ -7,6 +11,7 @@ const Projects = () => {
         Learning by Doing
       </h1>
       <p>Section Under Development...</p>
+      <Work/>
     </main>
   );
 };
